@@ -1,0 +1,51 @@
+<ion-header>
+
+  <ion-toolbar color="danger">
+    <ion-title style="font-family: 'Happy Monkey'; text-align: center">Agregar Campos</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-buttons end>
+    <button ion-button style="background-color: transparent; border: transparent" clear icon-only (click)="inicio()">
+      <ion-icon name='md-help-circle' is-active="false"></ion-icon>
+    </button>
+  </ion-buttons>
+
+  <div>
+    <ion-list>
+
+      <ion-item>
+        <ion-label color="dark">Familia</ion-label>
+        <ion-checkbox color="danger" [(ngModel)]="jajaja"></ion-checkbox>
+      </ion-item>
+
+     <!-- <ion-item>
+        <ion-label color="dark">Hogar</ion-label>
+        <ion-checkbox color="danger" [(ngModel)]="Hogar"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="dark">Escuela</ion-label>
+        <ion-checkbox color="danger" [(ngModel)]="Escuela"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="dark">Abecedario</ion-label>
+        <ion-checkbox color="danger" [(ngModel)]="Abecedario"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="dark">Colores</ion-label>
+        <ion-checkbox color="danger" [(ngModel)]="colores"></ion-checkbox>
+      </ion-item> -->
+    </ion-list>
+  </div>
+
+  <button ion-button round color="dark" (click)="agrfoto()">
+    Guardar y continuar
+  </button>
+</ion-content>

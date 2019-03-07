@@ -1,0 +1,52 @@
+<!--
+  Generated template for the AdminusuariosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-toolbar color="danger">
+    <ion-title style="font-family: 'Happy Monkey'; text-align: center">Agregar usuario</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item item-start>
+      <ion-label floating color="dark">Nombre</ion-label>
+      <ion-input type="text" value="" name="user_name" [(ngModel)]="data.user_name" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating color="dark">Apellidos</ion-label>
+      <ion-input type="text"  name="user_lastname" [(ngModel)]="data.user_lastname"></ion-input>
+    </ion-item>
+
+
+
+    <!-- ------------------ -->
+    <ion-item>
+      <ion-label floating color="dark">Sexo</ion-label>
+      <ion-select name="user_sexo" [(ngModel)]="data.user_sexo">
+        <ion-option value="M">Hombre</ion-option>
+        <ion-option value="F">Mujer</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating color="dark">Edad</ion-label>
+      <ion-input type="number"  name="user_age" [(ngModel)]="data.user_age"></ion-input>
+    </ion-item>
+    <!-- ------------------ -->
+
+    <button ion-button round (click)="usprincipal()">
+      Crear cuenta
+    </button><br><br>
+
+  </ion-list>
+
+
+</ion-content>

@@ -1,0 +1,85 @@
+<!--
+  Generated template for the UsdependientePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-toolbar color="danger">
+    <ion-title style="font-family: 'Happy Monkey';text-align: center"><ion-icon color="dark" name="person"></ion-icon>  Dependiente</ion-title>
+
+  </ion-toolbar>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-3>
+        <ion-fab top right edge>
+          <br>
+          <button ion-fab style="background-color:#EFBE12" (click)="agrcamps()"><ion-icon name="add" ></ion-icon></button>
+          Agregar campo
+        </ion-fab>
+      </ion-col>
+
+      <ion-col col-3>
+        <ion-fab top right edge>
+          <br>
+          <button ion-fab  style="background-color: #4DA844" (click)="avances()"><ion-icon name="ios-clipboard-outline"></ion-icon></button>
+          Avances
+        </ion-fab>
+      </ion-col>
+
+      <ion-col col-4>
+        <ion-fab top right edge >
+          <br>
+          <button ion-fab  style="background-color:#F77B03" (click)="conte()"><ion-icon name="ios-book-outline"></ion-icon></button>
+          Contenidos
+        </ion-fab>
+      </ion-col>
+
+      <ion-col col-2>
+        <button ion-button  style="background-color: transparent; border: transparent" clear icon-only (click)="inicio()">
+          <ion-icon name='md-help-circle' is-active="false"></ion-icon>
+        </button>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+  <br>
+  <br>
+  <!-- --------------------------------------- -->
+  <ion-label>USUARIO PRINCIPAL</ion-label>
+  <ion-list>
+    <button ion-item style="background-color: #00A2E8"  (click)=" insesion()">{{data.nombre}}</button>
+  </ion-list>
+
+  <ion-label>USUARIOS DEPENDIENTES</ion-label>
+  <ion-list>
+    <button ion-item *ngFor="let item of items" style="background-color: #00A2E8" (click)="usdependient(item)">
+      {{item.nombre}}
+    </button>
+  </ion-list>
+
+
+  <br><br>
+<div>
+    <button color="dark" ion-button round icon-start (click)="editusdep()">
+      <ion-icon name='md-create' is-active="false" ></ion-icon>
+      Editar usuario
+    </button>
+
+
+        <button ion-button  round color="dark" icon-start (click)="showConfirm()">
+          <ion-icon name="trash"></ion-icon>
+          <p>Eliminar Usuario</p>
+        </button>
+  </div>
+</ion-content>

@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title style="font-family:'Happy Monkey'; text-align: center">Iniciar Sesión</ion-title>
+  </ion-toolbar>
+  <link href="https://fonts.googleapis.com/css?family=Happy+Monkey" rel="stylesheet">
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating color="dark">Correo electrónico </ion-label>
+      <ion-input clearInput type="email"  name="user_email" [(ngModel)]="data.user_email"></ion-input>
+    </ion-item>
+
+    <ion-item class="password">
+      <ion-label floating color="dark">Contraseña </ion-label>
+        <ion-input  clearInput type="password" [type]="getType()" name="user_password" [(ngModel)]="data.user_password">
+        </ion-input>
+
+    </ion-item>
+
+    <ion-item style="text-align: end">
+      <ion-label>
+          <ion-icon clear color="dark" item-right (click)="toggleTextPassword()" class="eye-icon" name="{{isActiveToggleTextPassword ? 'eye': 'eye-off' }}"></ion-icon>
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+
+    <button ion-button round color="dark" type="submit" (click)="uprincipal()">
+        Iniciar sesión
+    </button>
+
+  <button ion-button round color="dark" (click)="recupcontra()">
+    ¿Has olvidado tu contraseña?
+  </button>
+
+  <p>Aún no tengo cuenta</p>
+  <button ion-button round color="dark" (click)="crcuenta()">
+    Crear cuenta
+  </button>
+</ion-content>

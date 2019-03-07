@@ -1,0 +1,47 @@
+.ios, .md{
+  page-contenido {
+
+    ion-content {
+      font-family: 'Happy Monkey';
+      text-align: center;
+      background-color: #00A2E8;
+      background-size: 100% 100%;
+      padding-vertical: 20px;
+    }
+    table {
+      width: 100%;
+    }
+
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+
+
+    }
+    .button {
+
+
+      background-color: map-get($colors,danger) ;  /* Fondo, debe ser más claro que el borde*/
+      border: 2px outset  map-get($colors,danger) ;  /* Grosor del Borde  Color del Borde*/
+      color: white;  /* Color del texto*/
+      text-align: center;  /* Alineación del texto*/
+
+
+
+
+    }
+    ion-fab-list{
+      background-color: #F77E02;  /* Fondo, debe ser más claro que el borde*/
+      border: 2px  white;  /* Grosor del Borde  Color del Borde*/
+      color: white;  /* Color del texto*/
+      text-align: center;  /* Alineación del texto*/
+      // text-shadow: -1px -1px rgba(0,0,0,.2);
+    }
+
+  }
+}
+
+
+
+

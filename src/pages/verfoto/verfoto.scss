@@ -1,0 +1,25 @@
+.ios, .md {
+  page-verfoto{
+
+    ion-content {
+      font-family: 'Happy Monkey';
+      text-align: center;
+      background-color: #00A2E8;
+      background-size: 100% 100%;
+      padding-vertical: 20px;
+    }
+    .button {
+
+
+      background-color: map-get($colors,danger) ;  /* Fondo, debe ser más claro que el borde*/
+      border: 2px outset  map-get($colors,danger) ;  /* Grosor del Borde  Color del Borde*/
+      color: white;  /* Color del texto*/
+      text-align: center;  /* Alineación del texto*/
+
+
+
+
+    }
+  }
+
+}

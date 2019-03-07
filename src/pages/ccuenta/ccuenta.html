@@ -1,0 +1,128 @@
+<ion-header>
+
+  <ion-toolbar color="danger">
+    <ion-title style="font-family: 'Happy Monkey'; text-align: center">Crear cuenta</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form [formGroup]="myForm" (ngSubmit)="saveData()">
+    <ion-list>
+      <!-- Nombre------------------------------------------------- -->
+      <ion-item>
+        <ion-icon name="person" item-start color="danger"></ion-icon>
+        <ion-label floating color="dark">Nombres:</ion-label>
+        <ion-input formControlName="name" type="text" placeholder="Nombre"  color="dark" name="user_name" [(ngModel)]="data.user_name" ></ion-input>
+      </ion-item>
+      <ion-item *ngIf="myForm.get('name').errors && myForm.get('name').dirty">
+        <p color="danger" ion-text *ngIf="myForm.get('name').hasError('required')">Este campo es requerido</p>
+      </ion-item>
+
+      <!-- Apellidos------------------------------------------------- -->
+      <ion-item>
+        <ion-icon name="person" item-start color="danger"></ion-icon>
+        <ion-label floating color="dark">Apellidos:</ion-label>
+        <ion-input formControlName="lastName" type="text" placeholder="Apellidos"   name="user_lastname" [(ngModel)]="data.user_lastname"  ></ion-input>
+      </ion-item>
+      <ion-item *ngIf="myForm.get('lastName').errors && myForm.get('lastName').dirty">
+        <p color="danger" ion-text *ngIf="myForm.get('lastName').hasError('required')">Este campo es requerido</p>
+      </ion-item>
+
+      <!-- Edad------------------------------------------------- -->
+
+      <ion-item>
+        <ion-icon name="calendar" item-start color="danger"></ion-icon>
+        <ion-label floating color="dark">Edad:</ion-label>
+        <ion-input formControlName="age" type="number" name="user_age" [(ngModel)]="data.user_age" ></ion-input>
+      </ion-item>
+      <ion-item *ngIf="myForm.get('age').errors && myForm.get('age').dirty">
+        <p color="danger" ion-text *ngIf="myForm.get('age').hasError('required')" style="font-size: 10px">Este campo es requerido que sean numeros</p>
+        <p color="danger" ion-text *ngIf="myForm.get('age').hasError('minlength')">Minimo un digito</p>
+        <p color="danger" ion-text *ngIf="myForm.get('age').hasError('maxlength')">Maximo 2 digitos</p>
+      </ion-item>
+
+      <!-- Sexo------------------------------------------------- -->
+
+      <ion-item>
+        <ion-icon name="transgender" item-start color="danger"></ion-icon>
+        <ion-label floating color="dark">Sexo</ion-label>
+        <ion-select formControlName="sexo" type="text" name="user_sexo" [(ngModel)]="data.user_sexo">
+          <ion-option value="H">Hombre</ion-option>
+          <ion-option value="M">Mujer</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item *ngIf="myForm.get('sexo').errors && myForm.get('sexo').dirty">
+        <p color="danger" ion-text *ngIf="myForm.get('sexo').hasError('required')">Este campo es requerido</p>
+      </ion-item>
+
+      <!-- Nombre de usuario------------------------------------------------- -->
+
+      <ion-item>
+        <ion-icon ios="ios-contact" md="md-contact" item-start color="danger"></ion-icon>
+        <ion-label floating color="dark">Nombre de usuario</ion-label>
+        <ion-input formControlName="nombredeusuario" type="text" name="user_nuser" [(ngModel)]="data.user_nuser"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="myForm.get('nombredeusuario').errors && myForm.get('nombredeusuario').dirty">
+        <p color="danger" ion-text *ngIf="myForm.get('nombredeusuario').hasError('required')">Este campo es requerido</p>
+      </ion-item>
+
+      <!-- correo electronico------------------------------------------------- -->
+
+      <ion-item>
+        <ion-icon name="mail" item-start color="danger"></ion-icon>
+        <ion-label floating color="dark">Correo electronico</ion-label>
+        <ion-input formControlName="email" type="email" name="user_email" [(ngModel)]="data.user_email"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="myForm.get('email').errors && myForm.get('email').dirty">
+        <p color="danger" ion-text *ngIf="myForm.get('email').hasError('required')">Este campo es requerido</p>
+        <p color="danger" ion-text *ngIf="myForm.get('email').hasError('email')">No es un correo valido</p>
+      </ion-item>
+
+      <!-- contraseña------------------------------------------------- -->
+      <ion-item>
+        <ion-icon ios="ios-key" md="md-key" item-start color="danger"></ion-icon>
+        <ion-label floating color="dark">Contraseña</ion-label>
+        <ion-input formControlName="password" type="password" name="user_pass" [(ngModel)]="data.user_pass"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="myForm.get('password').errors && myForm.get('password').dirty">
+        <p color="danger" ion-text *ngIf="myForm.get('password').hasError('required')">Este campo es requerido</p>
+        <p color="danger" ion-text *ngIf="myForm.get('password').hasError('pattern')">No es segura</p>
+      </ion-item>
+
+      <!-- confirmar contraseña------------------------------------------------- -->
+
+      <ion-item>
+        <ion-icon ios="ios-key" md="md-key" item-start color="danger"></ion-icon>
+        <ion-label floating color="dark">Confirmar contraseña</ion-label>
+        <ion-input formControlName="passwords" type="password" ></ion-input>
+      </ion-item>
+      <ion-item *ngIf="myForm.get('passwords').errors && myForm.get('passwords').dirty">
+        <p color="danger" ion-text *ngIf="myForm.get('passwords').hasError('required')">Este campo es requerido</p>
+        <p color="danger" ion-text *ngIf="myForm.get('passwords').hasError('pattern')">No es segura</p>
+      </ion-item>
+
+      <!-- teminps-------------------------------------------------
+
+      <ion-item>
+        <ion-label style="font-size: 10px">Estoy de acuerdo con los términos</ion-label>
+        <ion-checkbox color="danger" [checked]="true" formControlName="terminos" type = "checkbox"></ion-checkbox>
+      </ion-item>
+      <ion-item *ngIf="myForm.get('terminos').errors && myForm.get('terminos').dirty">
+        <p color="danger" ion-text *ngIf="myForm.get('terminos').hasError('required')">Este campo es requerido</p>
+      </ion-item> -->
+
+    <div padding>
+      <button ion-button round type="submit" [disabled]="!myForm.valid" (click)="pprimerospasos()">Guardar</button>
+    </div>
+
+
+    <p>¿Ya tienes una cuenta?</p>
+    <button ion-button round (click)="insesion()">
+      Iniciar sesión
+    </button>
+    </ion-list>
+
+  </form>
+</ion-content>

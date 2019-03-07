@@ -1,0 +1,70 @@
+<ion-header>
+
+  <ion-toolbar color="danger">
+    <ion-title style="font-family: 'Happy Monkey'; text-align: center">Editar cuenta</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+      <!-- Nombre------------------------------------------------- -->
+      <ion-item>
+        <ion-icon name="person" item-start color="danger"></ion-icon>
+        <ion-label floating color="dark">Nombres:</ion-label>
+        <ion-input type="text" placeholder="Nombre"  color="dark" name="user_name" [(ngModel)]="data.user_name"></ion-input>
+      </ion-item>
+
+
+      <!-- Apellidos------------------------------------------------- -->
+      <ion-item>
+        <ion-icon name="person" item-start color="danger"></ion-icon>
+        <ion-label floating color="dark">Apellidos:</ion-label>
+        <ion-input type="text" placeholder="Apellidos"   name="user_lastname" [(ngModel)]="data.user_lastname"></ion-input>
+      </ion-item>
+
+      <!-- Edad------------------------------------------------- -->
+
+      <ion-item>
+        <ion-icon name="calendar" item-start color="danger"></ion-icon>
+        <ion-label floating color="dark">Edad:</ion-label>
+        <ion-input type="number" name="user_age" [(ngModel)]="data.user_age"></ion-input>
+      </ion-item>
+
+      <!-- Sexo------------------------------------------------- -->
+
+      <ion-item>
+        <ion-icon name="transgender" item-start color="danger"></ion-icon>
+        <ion-label floating color="dark">Sexo</ion-label>
+        <ion-select  type="text" name="user_sexo" [(ngModel)]="data.user_sexo">
+          <ion-option value="H">Hombre</ion-option>
+          <ion-option value="M">Mujer</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <!-- Nombre de usuario------------------------------------------------- -->
+
+      <ion-item>
+        <ion-icon ios="ios-contact" md="md-contact" item-start color="danger"></ion-icon>
+        <ion-label floating color="dark">Nombre de usuario</ion-label>
+        <ion-input type="text" name="user_nuser" [(ngModel)]="data.user_nuser"></ion-input>
+      </ion-item>
+
+      <!-- correo electronico------------------------------------------------- -->
+
+      <ion-item>
+        <ion-icon name="mail" item-start color="danger"></ion-icon>
+        <ion-label floating color="dark">Correo electronico</ion-label>
+        <ion-input type="email" name="user_email" [(ngModel)]="data.user_email"></ion-input>
+      </ion-item>
+
+      <!-- contraseña------------------------------------------------- -->
+      <ion-item>
+        <ion-icon ios="ios-key" md="md-key" item-start color="danger"></ion-icon>
+        <ion-label floating color="dark">Contraseña</ion-label>
+        <ion-input type="password" name="user_pass" [(ngModel)]="data.user_pass"></ion-input>
+      </ion-item>
+
+
+        <button ion-button round type="submit" (click)="Usprincipal()">Aceptar</button>
+</ion-content>

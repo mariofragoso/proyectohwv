@@ -1,0 +1,7 @@
+{
+  "name": "proyectohwv",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,36 @@
+<!--
+  Generated template for the RecupcontraseñaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-toolbar color="danger">
+    <ion-title style="font-family: 'Happy Monkey'; text-align: center">¿Has olvidado tu contraseña?</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding style="background-color: #00A2E8">
+  <ion-card >
+    <ion-card-content text-center style="font-family: 'Happy Monkey'">
+      No te preocupes ingresa tu correo electrónico y nosotros te mandaremos tu contraseña correspondiente
+    </ion-card-content>
+    <ion-item>
+      <ion-label floating text-center style="font-family: 'Happy Monkey';font-size:15px">Ingresa tu correo electrónico </ion-label>
+      <ion-input type="text" value="" [(ngModel)]="data.user_email"></ion-input>
+    </ion-item>
+  </ion-card>
+  <button ion-button  round style=" font-family: 'Happy Monkey';
+       background-color: #f53d3d ;  /* Fondo, debe ser más claro que el borde*/
+      border: 2px outset #f53d3d  ;  /* Grosor del Borde  Color del Borde*/
+      color: white;  /* Color del texto*/
+      text-align: center;
+      position: center;
+" (click)="RecContra()">
+    Recuperar contraseña
+  </button>
+
+</ion-content>
